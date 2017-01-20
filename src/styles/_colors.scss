@@ -1,0 +1,13 @@
+$clr-white: #ffffff;
+
+$clr-theme-drk: #004e66;
+$clr-theme-lit: #598392;
+$clr-theme-ac1: #ff5f2e;
+$clr-theme-ac2: #fcbe32;
+$clr-theme-txt: #ffffff;
+
+$clr-text: $clr-theme-txt;
+$clr-text-alt: $clr-theme-ac1;
+
+$header-clr: darken($clr-theme-drk, 5%);
+$content-clr: $clr-theme-drk;

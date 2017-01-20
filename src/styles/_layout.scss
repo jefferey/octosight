@@ -1,0 +1,31 @@
+$header-height: 60px;
+
+#app, .app {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    .app-top {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: $header-height;
+        background-color: $header-clr;
+        overflow: hidden;
+    }
+
+    .app-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: $header-height;
+      bottom: 0;
+      background-color: $header-clr;
+      overflow: auto;
+      border-top: 2px solid $clr-text;
+      padding: 10px 20px;
+    }
+}
