@@ -1,6 +1,22 @@
 .header-container {
     height: $header-height;
     line-height: $header-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .header-left {
+        flex-grow: 0;
+        margin-right: 40px;
+    }
+
+    .header-center {
+        flex-grow: 1;
+    }
+
+    .header-right {
+        flex-grow: 0;
+    }
 
     .header-logo {
         margin: 0 10px;

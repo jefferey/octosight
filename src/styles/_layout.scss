@@ -23,9 +23,9 @@ $header-height: 60px;
       right: 0;
       top: $header-height;
       bottom: 0;
-      background-color: $header-clr;
+      background-color: $content-clr;
       overflow: auto;
-      border-top: 2px solid $clr-text;
+      //border-top: 2px solid $clr-theme-lit;
       padding: 10px 20px;
     }
 }

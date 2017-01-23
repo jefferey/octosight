@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import L from 'leaflet';
-import GitHub from 'github-api';
+import gh from '../api/GitHubApi';
 
 const REPO_TIMESPAN = {
     ALLTIME: 0,
@@ -46,6 +46,8 @@ class RepoUserHeatmap extends React.Component {
     componentDidMount() {
         this.initializeMap();
         this.updateData();
+
+        gh.getTopRepos();
     }
 
 
@@ -74,7 +76,7 @@ class RepoUserHeatmap extends React.Component {
     }
 
     updateData() {
-        
+
     }
 
     render() {
