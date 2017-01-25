@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const logoSrc = require('../assets/octosight.png');
+const logoSrc = require('../assets/logo.png');
 
 
 const MainHeader = (props) => {
