@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# This script should be run from the parent directory (the root of the project)
+set -xe
+
+# Build for deployment
+npm i
+npm run deploy
+
+# Copy website contents to S3
+aws s3 mb s3://octoviz.com
+aws s3 website s3://octoviz.com/ --index-document index.html --error-document index.html
+aws s3api put-bucket-policy --bucket octoviz.com --policy "file://$PWD/jenkins/bucket_policy.json"
+aws s3 cp --recursive dist/ s3://octoviz.com

@@ -33,3 +33,6 @@ react/demo/src/components/ais
 # font awesome fonts
 src/fonts/fontawesome*
 src/fonts/FontAwesome*
+
+# Emacs temp files
+*~
