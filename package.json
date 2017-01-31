@@ -1,7 +1,7 @@
 {
-  "name": "octosight",
+  "name": "octoviz",
   "version": "1.0.0",
-  "description": "OctoSight",
+  "description": "OctoViz",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",

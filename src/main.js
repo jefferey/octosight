@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import HomeView from './components/HomeView';
-import RepoUserHeatmap from './components/sights/RepoUserHeatmap';
+import RepoUserHeatmap from './components/views/RepoUserHeatmap';
 
 ReactDOM.render((
     <Router history={browserHistory}>
