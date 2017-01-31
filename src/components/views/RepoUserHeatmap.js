@@ -2,6 +2,8 @@ import React, {PropTypes} from 'react';
 import L from 'leaflet';
 import gh from '../api/GitHubApi';
 
+import RaisedButton from 'material-ui/RaisedButton';
+
 const REPO_TIMESPAN = {
     ALLTIME: 0,
     THIRTYDAYS: 1,
@@ -109,6 +111,7 @@ class RepoUserHeatmap extends React.Component {
         return (
             <div className="map-container">
                 <div className="os-map" ref={(div) => { this.mapDiv = div; }}></div>
+                <RaisedButton label="Default" />
             </div>
         );
     }
