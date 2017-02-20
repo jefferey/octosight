@@ -52,35 +52,23 @@ class RepoUserHeatmap extends React.Component {
         gh.getTopRepos().then(data => {
             console.log('=== REPOS ===');
             console.log(data);
-            gh.getContributors(data.data[0].full_name).then(contribs => {
-                console.log('=== CONTRIBS ===');
-                console.log(contribs);
-                gh.getUser(contribs.data[0].login).then(user => {
-                    console.log('=== USER ===');
-                    console.log(user);
-                    gh.getRateLimit().then(limit => {
-                        console.log('=== RATE LIMIT ===');
-                        console.log(limit);
-                    })
-                }).
-                catch(err => {
-                    console.log('ERROR:');
-                    console.log(err);
-                });
-            }).
-            catch(err => {
-                console.log('ERROR:');
-                console.log(err);
-            })
-        }).catch(err => {
-            console.log("ERROR:");
-            console.log(err);
-        });
+            return gh.getContributors(data.data[0].full_name);
+        }).then(contribs => {
+	    console.log('=== CONTRIBS ===');
+            console.log(contribs);
+            return gh.getUser(contribs.data[0].login);
+	}).then(user => {
+            console.log('=== USER ===');
+            console.log(user);
+            return gh.getRateLimit();
+	}).then(limit => {
+	    console.log('=== RATE LIMIT ===');
+            console.log(limit);
+	}).catch(err => {
+	    console.log('ERROR:');
+	    console.log(err);
+	});
     }
-
-
-
-
 
     componentWillUnmount() {
         this.map = null;
